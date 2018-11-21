@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <Field Type='Text' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' MaxLength='255' />
+    
+    <Field Type='Note' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' NumLines='6' RichText='FALSE' AppendOnly='FALSE' />
+    <Field Type='Note' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' NumLines='6' RichText='TRUE' RichTextMode='Compatible' IsolateStyles='FALSE' AppendOnly='FALSE' />
+    <Field Type='Note' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' NumLines='6' RichText='TRUE' RichTextMode='FullHtml' IsolateStyles='TRUE' RestrictedMode='TRUE' AppendOnly='FALSE' />
+    
+    <Field Type='Choice' Format='Dropdown' FillInChoice='FALSE' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE'><Default></Default><CHOICES><CHOICE></CHOICE></CHOICES></Field>
+    <Field Type='Choice' Format='RadioButtons' FillInChoice='FALSE' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE'><Default></Default><CHOICES><CHOICE></CHOICE></CHOICES></Field>
+    <Field Type='MultiChoice' FillInChoice='FALSE' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE'><Default></Default><CHOICES><CHOICE></CHOICE></CHOICES></Field>
+    
+    <Field Type='Number' Name='' DisplayName='' StaticName='' Percentage='FALSE' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' />
+    <Field Type='Number' Name='' DisplayName='' StaticName='' Percentage='FALSE' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' Decimals='' />
+    <Field Type='Number' Name='' DisplayName='' StaticName='' Percentage='FALSE' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' Min='' Max='' />
+    <Field Type='Number' Name='' DisplayName='' StaticName='' Percentage='FALSE' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' Decimals='' Min='' Max='' />
+    
+    <Field Type='Currency' LCID='' Name='' DisplayName='' StaticName='' Percentage='FALSE' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' />
+    <Field Type='Currency' LCID='' Name='' DisplayName='' StaticName='' Percentage='FALSE' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' Decimals='' />
+    <Field Type='Currency' LCID='' Name='' DisplayName='' StaticName='' Percentage='FALSE' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' Min='' Max='' />
+    <Field Type='Currency' LCID='' Name='' DisplayName='' StaticName='' Percentage='FALSE' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' Decimals='' Min='' Max='' />
+    
+    <Field Type='DateTime' Name='' StaticName='' DisplayName='' Format='DateOnly' FriendlyDisplayFormat='Disabled' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' />
+    <Field Type='DateTime' Name='' StaticName='' DisplayName='' Format='DateTime' FriendlyDisplayFormat='Disabled' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' />
+    <Field Type='DateTime' Name='' StaticName='' DisplayName='' Format='DateOnly' FriendlyDisplayFormat='Relative' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' />
+    <Field Type='DateTime' Name='' StaticName='' DisplayName='' Format='DateTime' FriendlyDisplayFormat='Relative' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' />
+    
+    <Field Type='Lookup' Name='' StaticName='' DisplayName='' List='{00000000-0000-0000-0000-000000000000}' ShowField='Title' RelationshipDeleteBehavior='None' Required='FALSE' EnforceUniqueValues='FALSE' />
+    <Field Type='LookupMulti' Name='' StaticName='' DisplayName='' List='{00000000-0000-0000-0000-000000000000}' ShowField='Title' Mult='TRUE' RelationshipDeleteBehavior='None' Required='FALSE' EnforceUniqueValues='FALSE' />
+    
+    <Field Type='Boolean' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE'><Default>1</Default></Field>
+    
+    <Field Type='User' List='UserInfo' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' UserSelectionMode='PeopleOnly' UserSelectionScope='0' />
+    <Field Type='User' List='UserInfo' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' UserSelectionMode='PeopleAndGroups' UserSelectionScope='0' Group='' Mult='FALSE' />
+    <Field Type='UserMulti' List='UserInfo' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' UserSelectionMode='PeopleOnly' UserSelectionScope='3' Group='' Mult='TRUE' />
+
+    <Field Type='URL' Format='Hyperlink' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' />
+    <Field Type='URL' Format='Image' Name='' StaticName='' DisplayName='' Required='FALSE' EnforceUniqueValues='FALSE' Indexed='FALSE' />
+    
+    <Field Type='Calculated' Name='' StaticName='' DisplayName='' EnforceUniqueValues='FALSE' Indexed='FALSE' Format='DateOnly' LCID='1081' ResultType='Text' ReadOnly='TRUE'>
+        <Formula>=Title</Formula>
+        <FormulaDisplayNames>=Title</FormulaDisplayNames>
+        <FieldRefs>
+            <FieldRef Name='Title' />
+        </FieldRefs>
+    </Field>
+    <Field Type='Calculated' Name='' StaticName='' DisplayName='' EnforceUniqueValues='FALSE' Indexed='FALSE' Format='DateOnly' LCID='1081' ResultType='Number' ReadOnly='TRUE' Required='FALSE' Decimals='2' Percentage='TRUE'>
+        <Formula>=Title</Formula>
+        <FormulaDisplayNames>=Title</FormulaDisplayNames>
+    </Field>
+    <Field Type='Calculated' Name='' StaticName='' DisplayName='' EnforceUniqueValues='FALSE' Indexed='FALSE' Format='DateOnly' LCID='1081' ResultType='Currency' Decimals='2'  ReadOnly='TRUE'>
+        <Formula>=Title</Formula>
+        <FormulaDisplayNames>=Title</FormulaDisplayNames>
+        <FieldRefs>
+            <FieldRef Name='Title' />
+        </FieldRefs>
+    </Field>
+    <Field Type='Calculated' Name='' StaticName='' DisplayName='' EnforceUniqueValues='FALSE' Indexed='FALSE' Format='DateOnly' LCID='1081' ResultType='DateTime' ReadOnly='TRUE' CustomFormatter='' Required='FALSE' Version='1'>
+        <Formula>=Title</Formula>
+        <FormulaDisplayNames>=Title</FormulaDisplayNames>
+    </Field>
+    <Field Type='Calculated' Name='' StaticName='' DisplayName='' EnforceUniqueValues='FALSE' Indexed='FALSE' Format='DateTime' LCID='1081' ResultType='DateTime' ReadOnly='TRUE' CustomFormatter='' Required='FALSE' Version='2'>
+        <Formula>=Title</Formula>
+        <FormulaDisplayNames>=Title</FormulaDisplayNames>
+    </Field>
+    <Field Type='Calculated' Name='' StaticName='' DisplayName='' EnforceUniqueValues='FALSE' Indexed='FALSE' Format='DateOnly' LCID='1081' ResultType='Boolean' ReadOnly='TRUE'>
+        <Formula>=Title</Formula>
+        <FormulaDisplayNames>=Title</FormulaDisplayNames>
+        <FieldRefs>
+            <FieldRef Name='Title' />
+        </FieldRefs>
+    </Field>
+
+</root>
